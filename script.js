@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   if (savedUsername && savedPassword) {
     existingButton.style.display = 'block';
     existingButton.addEventListener('click', () => {
-      alert(`Logged in as ${savedUsername}.`);
+      alert(`Logged in as ${savedUsername}`);
     });
   }
 });
@@ -32,9 +32,8 @@ loginForm.addEventListener('submit', (event) => {
     localStorage.removeItem('password');
   }
 
-  alert(`Logged in as ${username}.`);
+  alert(`Logged in as ${username}`);
 
-  // Show "Login as existing user" button if details are saved
   if (localStorage.getItem('username') && localStorage.getItem('password')) {
     existingButton.style.display = 'block';
   }
